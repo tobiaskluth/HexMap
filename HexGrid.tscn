@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://HexGrid.gd" type="Script" id=1]
+
+[node name="HexGrid" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.838499, 0.544903, 0, -0.544903, 0.838499, 12.0395, 14.0849, 33.7821 )
+current = true

@@ -1,16 +1,12 @@
-extends Node
+const OUTER_RADIUS = 2 # The outer radius of planes in Godot is 2
 
+const INNER_RADIUS = OUTER_RADIUS * 0.866025404
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+var corners = [
+		Vector3(0, 0, OUTER_RADIUS),
+		Vector3(INNER_RADIUS, 0, 0.5 * OUTER_RADIUS),
+		Vector3(INNER_RADIUS, 0, -0.5 * OUTER_RADIUS),
+		Vector3(0, 0, -OUTER_RADIUS),
+		Vector3(-INNER_RADIUS, 0, -0.5 * OUTER_RADIUS),
+		Vector3(-INNER_RADIUS, 0, 0.5 * OUTER_RADIUS)
+	]
