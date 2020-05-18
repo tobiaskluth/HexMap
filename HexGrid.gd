@@ -7,6 +7,8 @@ export var cell_prefab = preload("res://HexCell.tscn")
 
 var cells: Array
 
+onready var gui_canvas = $'Viewport/3D_GUI'
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var i := 0
@@ -25,8 +27,8 @@ func create_cell(var x: int, var z: int, var _i: int):
 	var cell = cell_prefab.instance()
 	cell.transform = Transform.IDENTITY.translated(position)
 
-	print(cell.transform)
-	print(position)
 	add_child(cell)
+	
+	gui_canvas.create_label(position)
 	
 	return cell
